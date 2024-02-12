@@ -1,0 +1,245 @@
+.title {
+  text-align: center;
+  font-size: 2rem;
+  margin: 20px;
+  color: #fff;
+}
+/* input and button */
+
+.contaniner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.gal-2 {
+  padding: 21px;
+  border: 2px solid #ccc;
+  background: transparent;
+  border-top: none;
+  font-size: 16px;
+  border-left: none;
+  border-right: none;
+  color: white;
+  margin-right: 10px;
+  outline: none;
+  width: 300px;
+}
+
+.gal-3 {
+  padding: 12px 38px;
+  background-color: #032312b4;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.gal-3:hover {
+  background-color: #032312;
+}
+
+/* cart */
+.cardContainer {
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  width: 220px;
+  height: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 65px;
+  border-radius: 10px;
+  -webkit-backdrop-filter: blur(30px);
+  backdrop-filter: blur(30px);
+  background-color: rgb(0 0 0 / 50%);
+  border: 1px solid rgba(255, 255, 255, 0.089);
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  margin-top: 10px;
+}
+
+.city {
+  font-weight: 700;
+  text-align: center;
+  font-size: 2rem;
+  letter-spacing: 1.2px;
+  color: rgb(255 255 255);
+}
+
+.weather {
+  font-weight: 500;
+  font-size: 0.7em;
+  letter-spacing: 1.2px;
+  color: rgb(197, 197, 197);
+}
+
+.temp {
+  font-size: 1.8em;
+  color: white;
+}
+
+.minmaxContainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.min,
+.max {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0px 20px;
+  gap: 4px;
+}
+
+.max {
+  align-items: center;
+  border-left: 2px solid rgb(255 255 255 / 42%);
+  border-radius: 2px;
+}
+
+.gal-1 {
+  width: 50%;
+  height: auto;
+  transition: transform 0.2s;
+}
+
+.gal-1:hover {
+  transform: scale(1.1);
+}
+
+.maxHeading,
+.minHeading {
+  font-size: 1em;
+  font-weight: 600;
+  color: #737373;
+}
+
+.maxTemp,
+.minTemp {
+  text-align: center;
+  font-size: 1.3em;
+  font-weight: 500;
+  color: rgb(255, 254, 254);
+}
+
+.cardContainer::before {
+    width: 100px;
+    height: 100px;
+    content: "";
+    position: absolute;
+    background-color: rgb(144, 161, 255);
+    z-index: -99999;
+    border-radius: 50%;
+    left: 221px;
+    bottom: 0;
+    transition: all 1s;
+}
+
+.cardContainer::after {
+    width: 100px;
+    height: 100px;
+    content: "";
+    position: absolute;
+    background-color: rgb(144, 161, 255);
+    z-index: -99999;
+    border-radius: 50%;
+    top: 2px;
+    left: 4px;
+    transition: all 1s;
+}
+
+.cardContainer:hover::after {
+   transform: translate(120px, 0px);
+}
+.cardContainer:hover::before {
+    transform: translate(-90px, 0px);
+}
+
+
+/* responsive mode */
+
+@media screen and (max-width: 768px) {
+  .gal-2 {
+    width: 200px;
+  }
+
+  .gal-3 {
+    padding: 10px 30px;
+  }
+
+  .card {
+    width: 180px;
+    height: 300px;
+  }
+
+  .gal-1 {
+    width: 40%;
+  }
+
+  .min,
+  .max {
+    width: 40%;
+    padding: 0px 15px;
+  }
+  .cardContainer::before {
+    width: 50px;
+    height: 50px;
+}
+
+.cardContainer::after {
+    width: 50px;
+    height: 50px;
+}
+}
+
+@media screen and (max-width: 480px) {
+  .gal-2 {
+    width: 150px;
+  }
+
+  .gal-3 {
+    padding: 8px 25px;
+  }
+
+  .card {
+    width: 140px;
+    height: 260px;
+  }
+
+  .gal-1 {
+    width: 35%;
+  }
+
+  .min,
+  .max {
+    width: 45%;
+    padding: 0px 10px;
+  }
+
+
+}
